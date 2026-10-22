@@ -1,0 +1,7 @@
+[
+    {"id": 1, "nome": "Jose Aldo Rocha", "disciplina": "Mátematica", "escola": "Colégio Municipal Monteiro Lobato"},
+    {"id": 2, "nome": "Maria Vitoria Soares Pereira", "disciplina": "História", "escola": "Colégio Municipal Ziraldo Alves Pinto"},
+    {"id": 3, "nome": "Clovis da Fonseca Neto", "disciplina": "Ciências", "escola": "Colégio Municipal Clarice Lispector"},
+    {"id": 4, "nome": "Pedro Maria da Silva Pinto", "disciplina": "Português", "escola": "Colégio Municipal Graciliano Ramos"}
+    
+]
