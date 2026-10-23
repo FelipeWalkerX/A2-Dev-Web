@@ -1,7 +1,7 @@
 // Importando os roteiros
 import roteiros from "@/data/roteiros.json"
-import RoteiroCard from "@/components/roteiroCard"
 import Cabecalho from "@/components/cabecalho"
+import ListaRoteiros from "@/components/listaRoteiros";
 
 
 export default function Home() {
@@ -13,12 +13,8 @@ export default function Home() {
       <p> 
         Temos {roteiros.length} roteiros disponíveis  
       </p>
-      {/* <ul> sao marcadores, neste caso, ele mostra cada um dos roteiros, como se fosse um vetor de roteiros */}
-      <ul>  
-        {roteiros.map((roteiro) => (
-          <RoteiroCard key = {roteiro.id} roteiro = {roteiro} />
-        ))}
-      </ul>
+      {/* .map e ul some e vira so essa linha agora, pois ta tudo dentro do arquivo listaRoteiros agora */}
+          <ListaRoteiros roteiros = {roteiros} />
     </main>
     ); 
   
