@@ -9,9 +9,9 @@
         "explicacao": "O mínimo múltiplo comum (MMC) corresponde ao menor número inteiro positivo, diferente de zero, que é múltiplo ao mesmo tempo de dois ou mais números. Por exemplo, os múltiplos de 2 são 2, 4, 6, 8, 10, 12... e os múltiplos de 3 são 3, 6, 9, 12, 15... O primeiro número que aparece nas duas listas é o 6, então o MMC de 2 e 3 é 6.",
         "professorId": 1,
         "questoes": [
-            {"pergunta": "Qual o MMC entre 36 e 48?", "resposta": "144"},
-            {"pergunta": "Qual o MMC entre os números 90, 150 e 20?", "resposta": "900"},
-            {"pergunta": "Determine o MMC entre 12, 32 e 40", "resposta": "480"}
+            {"pergunta": "1. Qual o MMC entre 36 e 48?", "resposta": "144"},
+            {"pergunta": "2. Qual o MMC entre os números 90, 150 e 20?", "resposta": "900"},
+            {"pergunta": "3. Determine o MMC entre 12, 32 e 40", "resposta": "480"}
         ]
     },
     {
@@ -24,9 +24,9 @@
         "explicacao": "Gênero textual é o formato que um texto tem de acordo com o seu uso no dia a dia, como dar uma notícia, ensinar uma receita ou contar uma história. Alguns exemplos são: o romance, o artigo de opinião, a notícia, a receita culinária, entre outros. Já um tipo textual é o modo de escrever (narrar, descrever, argumentar). Um mesmo gênero pode usar vários tipos textuais.",
         "professorId": 4,
         "questoes": [
-            {"pergunta": "Na minha opinião, o uso de celulares deveria ser proibido durante as aulas. Muitos alunos se distraem com redes sociais e jogos e acabam perdendo explicações importantes. Por isso, as escolas precisam criar regras mais claras sobre o assunto. A que gênero textual pertence o texto apresentado?", "resposta": "Texto de opinião"},
-            {"pergunta": "Quais dessa lista são gêneros textuais? Descrição, Contos, Narração e Receita culinária", "resposta": "Contos e Receita culinária"},
-            {"pergunta": "Na última sexta-feira, os alunos do 9º ano organizaram uma campanha de arrecadação de alimentos na escola. A iniciativa arrecadou mais de 200 kg de alimentos, que serão destinados a famílias carentes do município. A que gênero textual pertence esse texto?", "resposta": "Notícia"}
+            {"pergunta": "1. Na minha opinião, o uso de celulares deveria ser proibido durante as aulas. Muitos alunos se distraem com redes sociais e jogos e acabam perdendo explicações importantes. Por isso, as escolas precisam criar regras mais claras sobre o assunto. A que gênero textual pertence o texto apresentado?", "resposta": "Texto de opinião"},
+            {"pergunta": "2.Quais dessa lista são gêneros textuais? Descrição, Contos, Narração e Receita culinária", "resposta": "Contos e Receita culinária"},
+            {"pergunta": "3. Na última sexta-feira, os alunos do 9º ano organizaram uma campanha de arrecadação de alimentos na escola. A iniciativa arrecadou mais de 200 kg de alimentos, que serão destinados a famílias carentes do município. A que gênero textual pertence esse texto?", "resposta": "Notícia"}
         ]
     },
     {
@@ -39,9 +39,9 @@
         "explicacao": "A Revolução Francesa, ocorrida entre 1789 e 1799, foi um movimento impulsionado pela burguesia, que contou com a participação dos camponeses e das classes urbanas que viviam na miséria. A sociedade francesa era dividida em três grupos: o Primeiro Estado (o clero), o Segundo Estado (a nobreza) e o Terceiro Estado (todo o resto da população). O lema da revolução era ‘Liberdade, Igualdade e Fraternidade’.",
         "professorId": 2,
         "questoes": [
-            {"pergunta": "Por quem era formado o Terceiro Estado?", "resposta": "Era formado por todos que não pertenciam ao Primeiro e nem ao Segundo Estado"},
-            {"pergunta": "Quando ocorreu a Revolução Francesa?", "resposta": "Entre 1789 e 1799"},
-            {"pergunta": "Qual era o lema da Revolução?", "resposta": "Liberdade, Igualdade e Fraternidade"}
+            {"pergunta": "1. Por quem era formado o Terceiro Estado?", "resposta": "Era formado por todos que não pertenciam ao Primeiro e nem ao Segundo Estado"},
+            {"pergunta": "2. Quando ocorreu a Revolução Francesa?", "resposta": "Entre 1789 e 1799"},
+            {"pergunta": "3. Qual era o lema da Revolução?", "resposta": "Liberdade, Igualdade e Fraternidade"}
         ]
     },
     {
@@ -54,9 +54,9 @@
         "explicacao": "A Astronomia é o estudo dos astros, onde nele está contido o Sistema solar, que possui o Sol como uma estrela no centro do Sistema Solar. O maior planeta contido no sistema solar é Júpiter, também conhecido como gigante gasoso. A Terra possui um fenômeno incrível conhecido como Eclipse, que pode ser solar (que é quando a Lua fica entre nosso planeta e o Sol) ou lunar (que é quando a Terra fica entre a Lua e o Sol).",
         "professorId": 3,
         "questoes": [
-            {"pergunta": "Qual é a estrela que fica no centro do Sistema Solar?", "resposta": "O Sol"},
-            {"pergunta": "Qual o nome do maior planeta do Sistema Solar, conhecido como gigante gasoso?", "resposta": "Júpiter"},
-            {"pergunta": "Qual o nome do evento quando a Lua 'tampa' a luz do Sol, ou seja, passa entre a Terra e o Sol?", "resposta": "Eclipse solar"}
+            {"pergunta": "1. Qual é a estrela que fica no centro do Sistema Solar?", "resposta": "O Sol"},
+            {"pergunta": "2. Qual o nome do maior planeta do Sistema Solar, conhecido como gigante gasoso?", "resposta": "Júpiter"},
+            {"pergunta": "3. Qual o nome do evento quando a Lua 'tampa' a luz do Sol, ou seja, passa entre a Terra e o Sol?", "resposta": "Eclipse solar"}
         ]
     },
     {
@@ -69,9 +69,9 @@
         "explicacao": "Uma equação quadrática ou equação do segundo grau é uma equação em que o x aparece elevado ao quadrado (x²). Ela é escrita na forma ax² + bx + c = 0, em que a, b e c são números e o 'a' precisa ser diferente de 0. Para encontrar os valores de x, usamos a fórmula de Bhaskara: x = (-b ± √(b² - 4ac)) / (2a). Por exemplo, em x² - 5x + 6 = 0 temos a = 1, b = -5 e c = 6, e a fórmula dá as raízes 2 e 3, ou seja, x1 = 2 e x2 = 3.",
         "professorId": 1,
         "questoes": [
-            {"pergunta": "Encontre as raízes da seguinte equação de 2º grau: x² + 14x + 49 = 0", "resposta": "x1 = -7 e x2 = -7"},
-            {"pergunta": "Encontre as raízes da seguinte equação de 2º grau: -3x² + 18x - 15 = 0", "resposta": "x1 = 1 e x2 = 5"},
-            {"pergunta": "Qual a maior raiz da equação -2x² + 3x + 5 = 0?", "resposta": "2,5"}
+            {"pergunta": "1. Encontre as raízes da seguinte equação de 2º grau: x² + 14x + 49 = 0", "resposta": "x1 = -7 e x2 = -7"},
+            {"pergunta": "2. Encontre as raízes da seguinte equação de 2º grau: -3x² + 18x - 15 = 0", "resposta": "x1 = 1 e x2 = 5"},
+            {"pergunta": "3. Qual a maior raiz da equação -2x² + 3x + 5 = 0?", "resposta": "2,5"}
         ]
     },
     {
@@ -84,9 +84,9 @@
         "explicacao": "Concordância gramatical é quando as palavras de uma frase combinam entre si. Na concordância verbal, o verbo combina com o sujeito, ou seja, se o sujeito está no plural, o verbo também fica no plural, como em ‘O menino saiu’ e ‘Os meninos saíram’. Já na concordância nominal, as palavras que acompanham o substantivo combinam com ele em gênero e número, como em ‘a casa amarela’ e ‘os carros amarelos’.",
         "professorId": 4,
         "questoes": [
-            {"pergunta": "Selecione a opção correta e reescreva a frase: Comprei dois jogos (novo/novos) para poder jogar com (meu/meus) primo", "resposta": "Comprei dois jogos novos para poder jogar com meu primo"},
-            {"pergunta": "Selecione a opção correta e reescreva a frase: As meninas (chegou/chegaram) atrasadas na aula", "resposta": "As meninas chegaram atrasadas na aula"},
-            {"pergunta": "Selecione a opção correta e reescreva a frase: Os meninos (saiu/saíram) da casa amarela correndo", "resposta": "Os meninos saíram da casa amarela correndo"}
+            {"pergunta": "1. Selecione a opção correta e reescreva a frase: Comprei dois jogos (novo/novos) para poder jogar com (meu/meus) primo", "resposta": "Comprei dois jogos novos para poder jogar com meu primo"},
+            {"pergunta": "2. Selecione a opção correta e reescreva a frase: As meninas (chegou/chegaram) atrasadas na aula", "resposta": "As meninas chegaram atrasadas na aula"},
+            {"pergunta": "3. Selecione a opção correta e reescreva a frase: Os meninos (saiu/saíram) da casa amarela correndo", "resposta": "Os meninos saíram da casa amarela correndo"}
         ]
     }
 ]
