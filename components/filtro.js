@@ -9,7 +9,7 @@ export default function Filtro(props){
             <option value = "Português"> Português </option>
         </select>
             {/*Filtro do ano*/}
-        <select value = {ano} onChange = {(a) => setAno(a.target.value)}>
+        <select value = {props.ano} onChange = {(a) => props.setAno(a.target.value)}>
             <option value = ""> Escolha o ano: </option>
             <option value = "6"> 6º ano </option>
             <option value = "7"> 7º ano </option>
