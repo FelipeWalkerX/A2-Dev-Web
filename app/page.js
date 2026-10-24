@@ -5,6 +5,7 @@ import { useState } from "react"
 import roteiros from "@/data/roteiros.json"
 import Cabecalho from "@/components/cabecalho"
 import ListaRoteiros from "@/components/listaRoteiros";
+import Filtro from "@/components/filtro";
 
 
 export default function Home() {
@@ -24,22 +25,12 @@ export default function Home() {
         Temos {roteiros.length} roteiros disponíveis  
       </p>  
       {/*Filtro da disciplina*/}
-      <select value = {disciplina} onChange={(e) => setDisciplina(e.target.value)}> 
-        <option value = ""> Escolha uma disciplina: </option>
-        <option value = "Matemática"> Matemática </option>
-        <option value = "História"> História </option>
-        <option value = "Ciências"> Ciências </option>
-        <option value = "Português"> Português </option>
-      </select>
-      {/*Filtro do ano*/}
-      <select value = {ano} onChange = {(a) => setAno(a.target.value)}>
-        <option value = ""> Escolha o ano: </option>
-        <option value = "6"> 6º ano </option>
-        <option value = "7"> 7º ano </option>
-        <option value = "8"> 8º ano </option>
-        <option value = "9"> 9º ano </option>
-      </select>
-      <p>Voce escolheu a matéria: {disciplina} do {ano}º ano</p>
+      <Filtro 
+        disciplina = {disciplina} 
+        setDisciplina = {setDisciplina}
+        ano = {ano}
+        setAno = {setAno}
+      />
       {/* .map e ul some e vira so essa linha agora, pois ta tudo dentro do arquivo listaRoteiros agora */}
           <ListaRoteiros roteiros = {roteirosFiltrados} />
 
