@@ -1,6 +1,7 @@
 import roteiros from "@/data/roteiros.json"
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import professores from "@/data/professores.json"
 
 export function generateStaticParams(){     //Diz pro build quais id's do roteiro vao virar pagina
     return roteiros.map((roteiro) => ({id: String(roteiro.id)}));   //.map passa por todo mundo do roteiro, nesse caso, todos os id
@@ -13,6 +14,8 @@ export default async function PaginaRoteiro(props) {
     if(!roteiro){   //Se nao achar nenhuma id do roteiro compativel com o do endereco
         notFound(); //Ele da erro e fala que nao foi encontrado
     }
+    
+    const professor = professores.find((professor) => professor.id === roteiro.professorId)     //Na lista dos professores, acha o id que é igual o professorId
 
     return(
         <main>
@@ -37,6 +40,11 @@ export default async function PaginaRoteiro(props) {
                     
                 ))}
             </ol>
+
+            <p>
+                Conteudo gerado por IA e revisado por {professor.nome}, professor(a) de {professor.disciplina} na escola {professor.escola} 
+            </p>
+
             <p>
                 <Link href = "/">
                     Voltar para a lista
