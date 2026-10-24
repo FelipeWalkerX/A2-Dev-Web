@@ -2,6 +2,7 @@ import roteiros from "@/data/roteiros.json"
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import professores from "@/data/professores.json"
+import InfoAutor from "@/components/seloIA";
 
 export function generateStaticParams(){     //Diz pro build quais id's do roteiro vao virar pagina
     return roteiros.map((roteiro) => ({id: String(roteiro.id)}));   //.map passa por todo mundo do roteiro, nesse caso, todos os id
@@ -40,11 +41,7 @@ export default async function PaginaRoteiro(props) {
                     
                 ))}
             </ol>
-
-            <p>
-                Conteudo gerado por IA e revisado por {professor.nome}, professor(a) de {professor.disciplina} na escola {professor.escola} 
-            </p>
-
+            <InfoAutor professor = {professor} />
             <p>
                 <Link href = "/">
                     Voltar para a lista
