@@ -1,4 +1,5 @@
 import roteiros from "@/data/roteiros.json"
+import Link from "next/link";
 
 export function generateStaticParams(){     //Diz pro build quais id's do roteiro vao virar pagina
     return roteiros.map((roteiro) => ({id: String(roteiro.id)}));   //.map passa por todo mundo do roteiro, nesse caso, todos os id
@@ -30,6 +31,11 @@ export default async function PaginaRoteiro(props) {
                     
                 ))}
             </ol>
+            <p>
+                <Link href = "/">
+                    Voltar para a lista
+                </Link>
+            </p>
         </main> 
     )
 }
