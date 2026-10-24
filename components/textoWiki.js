@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 export default function TextoWiki(props)    {
     const [estado, setEstado] = useState("carregando");
     const [resumo, setResumo] = useState("");
+    const [link, setLink] = useState("");
 
     useEffect(() =>{
         async function buscar (){   //Tenta buscar a pagina
@@ -14,6 +15,7 @@ export default function TextoWiki(props)    {
                 }
                 const dados = await resposta.json();    //Se achou, prepara para pegar os dados do json
                 setResumo(dados.extract);       //Pega os dados do extract do json da api
+                setLink(dados.content_urls.desktop.page);   // Pega a url da pagina principal caso o aluno tenha mais duvidas sobre o assunto
                 setEstado("sucesso");       //E guarda que deu bom
             }
             catch (erro){       //Se deu BO na busca
@@ -29,6 +31,10 @@ export default function TextoWiki(props)    {
     if (estado === "erro"){         //Se ele nao achou
         return <p> Não foi possível localizar o resumo </p>     //Retorna isso
     }
-    return <p>{resumo}</p>      //Se deu tudo certo, ele retorna o resumo da api
-
+    return(
+        <div>
+            <p>{resumo}</p>      {/*Se deu tudo certo, ele retorna o resumo da api*/}
+            <a href = {link} target = "_blank"> Ler mais na Wikipédia</a>
+        </div>
+    );
 }
