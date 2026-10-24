@@ -2,7 +2,8 @@ import roteiros from "@/data/roteiros.json"
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import professores from "@/data/professores.json"
-import InfoAutor from "@/components/seloIA";
+import SeloIA from "@/components/seloIA";
+import TextoWiki from "@/components/textoWiki";
 
 export function generateStaticParams(){     //Diz pro build quais id's do roteiro vao virar pagina
     return roteiros.map((roteiro) => ({id: String(roteiro.id)}));   //.map passa por todo mundo do roteiro, nesse caso, todos os id
@@ -13,7 +14,7 @@ export default async function PaginaRoteiro(props) {
     const roteiro = roteiros.find((roteiro) => String(roteiro.id) === params.id);   //Acha o primeiro que o id do roteiro seja igual ao id do endereco da pagina
     
     if(!roteiro){   //Se nao achar nenhuma id do roteiro compativel com o do endereco
-        notFound(); //Ele da erro e fala que nao foi encontrado
+        notFound(); //Ele mostra a pagina de nao encontrado
     }
     
     const professor = professores.find((professor) => professor.id === roteiro.professorId)     //Na lista dos professores, acha o id que é igual o professorId
@@ -29,6 +30,8 @@ export default async function PaginaRoteiro(props) {
             </p>
             <p> Tempo estimado: {roteiro.tempoEstimado} minutos</p>    
             <p> Sobre o tema: {roteiro.explicacao}</p>
+            <h2> <br /> Texto de apoio (Wikipédia)</h2>
+            <TextoWiki tema = {roteiro.tema} />     
             
             <h2>
                 <br /> Questões:
@@ -41,7 +44,7 @@ export default async function PaginaRoteiro(props) {
                     
                 ))}
             </ol>
-            <InfoAutor professor = {professor} />
+            <SeloIA professor = {professor} />
             <p>
                 <Link href = "/">
                     Voltar para a lista
