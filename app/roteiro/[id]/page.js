@@ -1,5 +1,6 @@
 import roteiros from "@/data/roteiros.json"
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 export function generateStaticParams(){     //Diz pro build quais id's do roteiro vao virar pagina
     return roteiros.map((roteiro) => ({id: String(roteiro.id)}));   //.map passa por todo mundo do roteiro, nesse caso, todos os id
@@ -8,6 +9,11 @@ export function generateStaticParams(){     //Diz pro build quais id's do roteir
 export default async function PaginaRoteiro(props) {
     const params = await props.params;  //Espera o Next entregar o id do endereco para comecar os trabalhos 
     const roteiro = roteiros.find((roteiro) => String(roteiro.id) === params.id);   //Acha o primeiro que o id do roteiro seja igual ao id do endereco da pagina
+    
+    if(!roteiro){   //Se nao achar nenhuma id do roteiro compativel com o do endereco
+        notFound(); //Ele da erro e fala que nao foi encontrado
+    }
+
     return(
         <main>
             <h1>
