@@ -41,7 +41,7 @@ export default function SugerirRoteiro(){
 
                 <label>
                     Ano: 
-                    <select value = {ano} onChange = {(a) => setAno(a.target.value)}>
+                    <select value = {ano} onChange = {(a) => setAno(a.target.value)}>       {/* Select para puxar os anos */}
                         <option value = ""> Escolha o ano: </option>
                         <option value = "6"> 6º ano </option>
                         <option value = "7"> 7º ano </option>
@@ -52,7 +52,7 @@ export default function SugerirRoteiro(){
 
                 <label>
                     <br />Disciplina: 
-                    <select value = {disciplina} onChange={(e) => setDisciplina(e.target.value)}> 
+                    <select value = {disciplina} onChange={(e) => setDisciplina(e.target.value)}> {/*  e as materias que tem, pra nao dar ruim */}
                         <option value = ""> Escolha uma disciplina: </option>
                         <option value = "Matemática"> Matemática </option>
                         <option value = "História"> História </option>
@@ -63,12 +63,12 @@ export default function SugerirRoteiro(){
 
                 <label>
                     <br />Data de uso: 
-                    <input type = "date" value = {dataUso} onChange = {(e) => setDataUso(e.target.value)} />
+                    <input type = "date" value = {dataUso} onChange = {(e) => setDataUso(e.target.value)} />    {/* usado data para digitar so data, certinho */}
                 </label>
 
                 <label>
                     <br />Quantidade de questoes: 
-                    <input type = "number" value = {qtdeQuestoes} onChange = {(e) => setQtdeQuestoes(e.target.value)} />
+                    <input type = "number" value = {qtdeQuestoes} onChange = {(e) => setQtdeQuestoes(e.target.value)} />    {/* E aqui so pra digitar numeros */}
                 </label>
 
             </form>
