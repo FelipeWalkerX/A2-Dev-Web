@@ -34,7 +34,7 @@ export default function TextoWiki(props)    {
     return(
         <div>
             <p>{resumo}</p>      {/*Se deu tudo certo, ele retorna o resumo da api*/}
-            <a href = {link} target = "_blank"> Ler mais na Wikipédia</a>
+            <a href = {link} target = "_blank"> Ler mais na Wikipédia</a>       {/* Gera uma mensagem nova abaixo do resumo de "leia mais" que manda direto para o site da wiki */}
         </div>
     );
 }
