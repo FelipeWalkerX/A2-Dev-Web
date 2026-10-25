@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <main>  
       {/* <h1> é o titulo */}
-      <Cabecalho titulo = "Plataforma de roteiros"/>
+      <Cabecalho titulo = "Plataforma de Roteiros"/>
       {/* <p> é o texto normal */}
       <p> 
         Temos {roteiros.length} roteiros disponíveis  

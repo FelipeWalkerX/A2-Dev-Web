@@ -27,7 +27,7 @@ main{
 }
 
 header {
-  display: flex;
+  display: flex; 
   justify-content: space-between;   /*Coloca o titulo e o menu um em cada ponta pra nao ficar tudo acumulado perto um do outro*/
   align-items: center;    /*Alinha os dois titulos na mesma altura pra nao ficarem grudados em cima*/
   border-bottom: 1px solid var(--bordas);   /*ÉUma linha embaixo do cabecalho para separar do resto, aonde a linha tem 1 pixel, é continua (solid) e dessa cor*/
@@ -38,7 +38,7 @@ header {
 header h1{      /*Regra pra valer so para o titulo do cabecalho e nao pros h1 do site*/
   margin: 0;     /*O texto precisa de margem zerada, pois como ele ja tem margem propria, precisa zerar para se alinhar com o menu*/ 
   letter-spacing: 1px;    /*Espacamento entre as letras do cabecalho*/
-  color: #33ffff;    /*Puxando a cor do root*/
+  color: var(--titulo);    /*Puxando a cor do root*/
 }
 
 nav a{
@@ -46,4 +46,18 @@ nav a{
   margin-right: 16px;    /*Espaco entre um link e outro*/
   text-decoration: none;    /*Sem decoracao nos links*/
   color: var(--textoP)
+}
+
+.filtros{   
+  display: flex;      /*Muda o modo de arrumacao para ficarem lado a lado e nao um embaixo do outro*/
+  gap: 12px;    /*Coloca espaco entre os itens do flex*/
+  margin-bottom: 24px;    /*Coloca margem para o filtro*/
+}
+
+select, input{    /*O select é uma tag como o resto e nao uma classe como o .filtros, por isso nao tem ponto*/
+  background-color: var(--cards);   /*Coloca cor no fundo do nos campos de escrita, filtros e nos formularios*/
+  color: var(--textoP);     /*Cor do texto dos cards*/
+  border: 1px solid var(--bordas);    /*E das bordas dos cards*/
+  border-radius: 8px;
+  padding: 10px 12px;
 }
