@@ -7,7 +7,7 @@ export default function ListaRoteiros(props){
         )
     }
     return(
-        <ul>    {/*Aqui dentro ja é JSX*/}
+        <ul className="grade">    {/*Aqui dentro ja é JSX*/}
         {/* <ul> sao marcadores, neste caso, ele mostra cada um dos roteiros, como se fosse um vetor de roteiros */}
             {props.roteiros.map((roteiro)=>(
                 <RoteiroCard key = {roteiro.id} roteiro = {roteiro} />

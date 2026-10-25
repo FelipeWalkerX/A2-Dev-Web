@@ -4,8 +4,8 @@
   --bordas: #262e52;   /*Bordas dos cards e dos campos de digitacao*/
   --textoP: #e6e8f5;   /*Texto principal*/
   --textoS: #959bbd;   /*Texto secundario, tipo as respostas das questoes ou o tempo de estudo nos cards*/
-  --titulo: #33ffff;    /*Cor unica so para o titulo, o roxo que tinha escolhido antes ficou esquisito*/
-  --destaque: #8b5cf6;    /*Os links e as bordas em cima dos cards*/
+  --link: #33ffff;    /*Cor unica so para os links, o roxo que tinha escolhido antes ficou esquisito*/
+  --destaque: #8b5cf6;    /*O cabecalho e as bordas em cima dos cards*/
   --subtitulos: #60a5fa;    /*Os subtitulos*/
 }
 
@@ -17,7 +17,7 @@ body{
 }
 
 a{    /*Esse 'a' vira o link do next, a tag 'link' serve pra carregadr arquivos e nao pra isso que eu preciso*/
-  color: var(--destaque);
+  color: var(--link);
 }
 
 main{
@@ -38,7 +38,7 @@ header {
 header h1{      /*Regra pra valer so para o titulo do cabecalho e nao pros h1 do site*/
   margin: 0;     /*O texto precisa de margem zerada, pois como ele ja tem margem propria, precisa zerar para se alinhar com o menu*/ 
   letter-spacing: 1px;    /*Espacamento entre as letras do cabecalho*/
-  color: var(--titulo);    /*Puxando a cor do root*/
+  color: var(--destaque);    /*Puxando a cor do root*/
 }
 
 nav a{
@@ -60,4 +60,28 @@ select, input{    /*O select é uma tag como o resto e nao uma classe como o .fi
   border: 1px solid var(--bordas);    /*E das bordas dos cards*/
   border-radius: 8px;
   padding: 10px 12px;
+}
+
+.grade {
+  list-style: none;   /*Tira as bolinhas dos roteiros (pra nao ficar com aquela carona de site duvidoso*/
+  padding: 0;   /*Tirado o recuo que as bolinhas deixa*/
+  display: grid;    /*Colocado cada roteiro em colunas para ficar melhor organizado*/
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));    /*Cria quantas colunas couberem no espaco que tem, nesse caso cada uma com no minimo de 260 pixels, pra dividir em 3 roteiros por coluna*/
+  gap: 16px;
+}
+
+.card{
+  background-color: var(--cards);
+  border: 1px solid var(--bordas);
+  border-top: 4px solid var(--destaque);    /*Borda mais grossa em cima do grid para ficar mais bonitinho*/
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.card a{    /*Mexendo no estado normal*/
+  text-decoration: none;    /*Tirado a linha do link para nao ficar esquisito*/
+}
+
+.card a:hover{    /*Agora se o mouse tiver em cima do texto do link*/
+  text-decoration: underline;   /*Deixado para a linha aparecer so quando eu colocar o mouse em cima do texto*/
 }
