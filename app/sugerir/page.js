@@ -15,7 +15,7 @@ export default function SugerirRoteiro(){
     const [erros, setErros] = useState([]); // Os erros comeca como uma lista vazia
 
     function enviar(e){     // Funcao para enviar o formulario
-        e.preventDefault(); //Isso aqui previne de recarregar a pagina quando o relatorio for enviado
+        e.preventDefault(); //Isso aqui previne de recarregar a pagina quando o formulario for enviado
 
         //Validacao de erros
         const novosErros = [];      //Uma lista vazia que atualiza toda vez que o botao de enviar e clicado

@@ -84,4 +84,4 @@ select, input{    /*O select é uma tag como o resto e nao uma classe como o .fi
 
 .card a:hover{    /*Agora se o mouse tiver em cima do texto do link*/
   text-decoration: underline;   /*Deixado para a linha aparecer so quando eu colocar o mouse em cima do texto*/
-}
+} 
