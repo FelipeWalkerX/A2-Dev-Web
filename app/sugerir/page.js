@@ -11,6 +11,12 @@ export default function SugerirRoteiro(){
     const [ano, setAno] = useState("");
     const [qtdeQuestoes, setQtdeQuestoes] = useState("");
     const [dataUso, setDataUso] = useState("");
+    const [enviado, setEnviado] = useState("")
+
+    function enviar(e){     // Funcao para enviar o formulario
+        e.preventDefault(); //Isso aqui previne de recarregar a pagina quando o relatorio for enviado
+        setEnviado(true);   //E aqui marca que o formulario foi enviado, pra mensagem aparecer
+    }
 
     return(
         <main>
@@ -18,7 +24,7 @@ export default function SugerirRoteiro(){
             <h2> <br /> Deseja sugerir um roteiro novo? </h2>
             <p> Preencha os dados abaixo para sugerir um roteiro de estudo novo.  </p>
 
-            <form>  {/* Agrupa os formularios */}
+            <form onSubmit = {enviar}>  {/* Agrupa os formularios e ja se previne com a funcao enviar pra nao recarregar assim que for enviado */}
                 {/* Campos para digitar nome */}
                 <label> {/* Nome do campo que aparece para o usuario */}
                     Nome:
@@ -41,7 +47,7 @@ export default function SugerirRoteiro(){
 
                 <label>
                     Ano: 
-                    <select value = {ano} onChange = {(a) => setAno(a.target.value)}>       {/* Select para puxar os anos */}
+                    <select value = {ano} onChange = {(a) => setAno(a.target.value)}>       {/* Select para puxar os anos... */}
                         <option value = ""> Escolha o ano: </option>
                         <option value = "6"> 6º ano </option>
                         <option value = "7"> 7º ano </option>
@@ -52,7 +58,7 @@ export default function SugerirRoteiro(){
 
                 <label>
                     <br />Disciplina: 
-                    <select value = {disciplina} onChange={(e) => setDisciplina(e.target.value)}> {/*  e as materias que tem, pra nao dar ruim */}
+                    <select value = {disciplina} onChange={(e) => setDisciplina(e.target.value)}> {/*  ...e as materias que tem, pra nao dar ruim */}
                         <option value = ""> Escolha uma disciplina: </option>
                         <option value = "Matemática"> Matemática </option>
                         <option value = "História"> História </option>
@@ -71,7 +77,11 @@ export default function SugerirRoteiro(){
                     <input type = "number" value = {qtdeQuestoes} onChange = {(e) => setQtdeQuestoes(e.target.value)} />    {/* E aqui so pra digitar numeros */}
                 </label>
 
+                <button type = "submit"> Enviar sugestão </button>
             </form>
+
+            {enviado && <p>Sugestão enviada com sucesso!</p>}       {/* Se for enviado, ele mostra essa mensagem, é um if dentro do jsx */}
+
         </main>
     );
 }
