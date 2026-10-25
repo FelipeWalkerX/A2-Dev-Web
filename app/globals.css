@@ -4,7 +4,8 @@
   --bordas: #262e52;   /*Bordas dos cards e dos campos de digitacao*/
   --textoP: #e6e8f5;   /*Texto principal*/
   --textoS: #959bbd;   /*Texto secundario, tipo as respostas das questoes ou o tempo de estudo nos cards*/
-  --destaque: #8b5cf6;    /*Titulo do site, os links e as bordas em cima dos cards*/
+  --titulo: #33ffff;    /*Cor unica so para o titulo, o roxo que tinha escolhido antes ficou esquisito*/
+  --destaque: #8b5cf6;    /*Os links e as bordas em cima dos cards*/
   --subtitulos: #60a5fa;    /*Os subtitulos*/
 }
 
@@ -15,8 +16,34 @@ body{
   font-family: "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
+a{    /*Esse 'a' vira o link do next, a tag 'link' serve pra carregadr arquivos e nao pra isso que eu preciso*/
+  color: var(--destaque);
+}
+
 main{
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 24px 16px;
+  max-width: 960px;   /*Tamanho maximo da conteudo com texto*/
+  margin: 0 auto;   /*Sem margem em cima e embaixo e com margem automatica na direita e esquerda*/
+  padding: 24px 16px;   /*Espaco de dentro de um bloco, para o que ta dentro nao encostar nas bordas*/
+}
+
+header {
+  display: flex;
+  justify-content: space-between;   /*Coloca o titulo e o menu um em cada ponta pra nao ficar tudo acumulado perto um do outro*/
+  align-items: center;    /*Alinha os dois titulos na mesma altura pra nao ficarem grudados em cima*/
+  border-bottom: 1px solid var(--bordas);   /*ÉUma linha embaixo do cabecalho para separar do resto, aonde a linha tem 1 pixel, é continua (solid) e dessa cor*/
+  padding-bottom: 16px;    /*A distancia do que da dentro do cabecalho para a margem tem 16 pixels*/
+  margin-bottom: 24px;    /*Ja a margem do cabecalho tem 24 pixels*/
+}
+
+header h1{      /*Regra pra valer so para o titulo do cabecalho e nao pros h1 do site*/
+  margin: 0;     /*O texto precisa de margem zerada, pois como ele ja tem margem propria, precisa zerar para se alinhar com o menu*/ 
+  letter-spacing: 1px;    /*Espacamento entre as letras do cabecalho*/
+  color: #33ffff;    /*Puxando a cor do root*/
+}
+
+nav a{
+  margin-left: 16px;    /*Espaco entre um link e outro*/
+  margin-right: 16px;    /*Espaco entre um link e outro*/
+  text-decoration: none;    /*Sem decoracao nos links*/
+  color: var(--textoP)
 }
