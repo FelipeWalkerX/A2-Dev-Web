@@ -29,10 +29,18 @@ export default async function PaginaRoteiro(props) {
                 {roteiro.disciplina} - {roteiro.ano}º ano
             </p>
             <p> Tempo estimado: {roteiro.tempoEstimado} minutos</p>    
-            <p> Sobre o tema: {roteiro.explicacao}</p>
-            <h2> <br /> Texto de apoio (Wikipédia)</h2>
-            <TextoWiki tema = {roteiro.tema} />     
-            
+            <div className="duas-colunas">      {/* Junta as duas partes (a minha expllicacao e a da Wiki) pro CSS deixar uma do lado da outra */}
+                <section className="bloco">
+                    <h2>Explicação (gerada por IA)</h2>
+                    <p>{roteiro.explicacao}</p>
+                </section>
+
+                <section className="bloco">
+                    <h2>Texto de apoio (Wikipédia)</h2>
+                    <TextoWiki tema={roteiro.tema} />
+                </section>
+            </div>
+
             <h2>
                 <br /> Questões:
             </h2>

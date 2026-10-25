@@ -66,7 +66,7 @@ select, input{    /*O select é uma tag como o resto e nao uma classe como o .fi
   list-style: none;   /*Tira as bolinhas dos roteiros (pra nao ficar com aquela carona de site duvidoso*/
   padding: 0;   /*Tirado o recuo que as bolinhas deixa*/
   display: grid;    /*Colocado cada roteiro em colunas para ficar melhor organizado*/
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));    /*Cria quantas colunas couberem no espaco que tem, nesse caso cada uma com no minimo de 260 pixels, pra dividir em 3 roteiros por coluna*/
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));    /*Cria quantas colunas couberem no espaco que tem, nesse caso cada uma com no minimo de 260 pixels, pra dividir em 3 roteiros por linha*/
   gap: 16px;
 }
 
@@ -85,3 +85,21 @@ select, input{    /*O select é uma tag como o resto e nao uma classe como o .fi
 .card a:hover{    /*Agora se o mouse tiver em cima do texto do link*/
   text-decoration: underline;   /*Deixado para a linha aparecer so quando eu colocar o mouse em cima do texto*/
 } 
+
+.duas-colunas{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 24px 0;
+}
+
+.bloco{
+  background-color: var(--cards);
+  border: 1px solid var(--bordas);
+  border-radius: 10px;
+  padding: 16px;
+}
+
+h2{
+  color: var(--subtitulos);   /*Colocando cor nos subtitulos*/
+}
