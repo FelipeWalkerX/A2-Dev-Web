@@ -155,3 +155,28 @@ button{
 .sucesso{
   color: var(--sucesso);
 }
+
+.nRoteirosDisp{
+  color: var(--textoS);
+}
+
+.etiqueta{    /*Colocando a disciplina e o ano dentro de um cilindrinho*/
+  display: inline-block;    
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 99px;    /*Nº bem grande pra deixar as bordas arredondadas*/
+  background-color: #241a4d;
+  color: #b8a1ff;
+  margin-bottom: 8px;
+}
+
+.card h3{   /*Arrumando o titulo do roteiro dentro do card*/
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.card p{    /*Colocando um rodape no card da materia falando para o aluno quanto tempo ele vai levar nos estudos*/
+  margin: 0;
+  font-size: 13px;
+  color: var(--textoS);
+}

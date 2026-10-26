@@ -21,7 +21,7 @@ export default function Home() {
       {/* <h1> é o titulo */}
       <Cabecalho titulo = "Plataforma de Roteiros"/>
       {/* <p> é o texto normal */}
-      <p> 
+      <p className="nRoteirosDisp"> 
         Temos {roteiros.length} roteiros disponíveis  
       </p>  
       {/*Filtro da disciplina*/}
