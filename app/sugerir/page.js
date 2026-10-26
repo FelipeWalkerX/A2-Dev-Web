@@ -73,10 +73,10 @@ export default function SugerirRoteiro(){
     return(
         <main>
             <Cabecalho titulo = "Plataforma de Roteiros" />
-            <h2> <br /> Deseja sugerir um roteiro novo? </h2>
+            <h2>  Deseja sugerir um roteiro novo? </h2>
             <p> Preencha os dados abaixo para sugerir um roteiro de estudo novo.  </p>
 
-            <form onSubmit = {enviar}>  {/* Agrupa os formularios e ja se previne com a funcao enviar pra nao recarregar assim que for enviado */}
+            <form className="formulario" onSubmit = {enviar}>  {/* Agrupa os formularios e ja se previne com a funcao enviar pra nao recarregar assim que for enviado */}
                 {/* Campos para digitar nome */}
                 <label> {/* Nome do campo que aparece para o usuario */}
                     Nome:
@@ -95,7 +95,7 @@ export default function SugerirRoteiro(){
                     <input type = "text" value = {tema} onChange = {(e) => setTema(e.target.value)} />
                 </label>
 
-                <h3> <br /><br /> Roteiro das questoes <br /><br /> </h3>
+                <h3>  Roteiro das questoes  </h3>
 
                 <label>
                     Ano: 
@@ -109,7 +109,7 @@ export default function SugerirRoteiro(){
                 </label>
 
                 <label>
-                    <br />Disciplina: 
+                    Disciplina: 
                     <select value = {disciplina} onChange={(e) => setDisciplina(e.target.value)}> {/*  ...e as materias que tem, pra nao dar ruim */}
                         <option value = ""> Escolha uma disciplina: </option>
                         <option value = "Matemática"> Matemática </option>
@@ -120,25 +120,25 @@ export default function SugerirRoteiro(){
                 </label>
 
                 <label>
-                    <br />Data de uso: 
+                    Data de uso: 
                     <input type = "date" value = {dataUso} onChange = {(e) => setDataUso(e.target.value)} />    {/* usado data para digitar so data, certinho */}
                 </label>
 
                 <label>
-                    <br />Quantidade de questoes: 
+                    Quantidade de questoes: 
                     <input type = "number" value = {qtdeQuestoes} onChange = {(e) => setQtdeQuestoes(e.target.value)} />    {/* E aqui so pra digitar numeros */}
                 </label>
 
                 <button type = "submit"> Enviar sugestão </button>
             </form>
 
-            <ul>
+            <ul className="erros">
                 {erros.map((erro, posicao) =>(
                     <li key = {posicao}>{erro}</li>
                 ))}
             </ul>
 
-            {enviado && <p>Sugestão enviada com sucesso!</p>}       {/* Se for enviado, ele mostra essa mensagem, é um if dentro do jsx */}
+            {enviado && <p className="sucesso">Sugestão enviada com sucesso!</p>}       {/* Se for enviado, ele mostra essa mensagem, é um if dentro do jsx */}
 
         </main>
     );

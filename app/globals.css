@@ -7,6 +7,8 @@
   --link: #33ffff;    /*Cor unica so para os links, o roxo que tinha escolhido antes ficou esquisito*/
   --destaque: #8b5cf6;    /*O cabecalho e as bordas em cima dos cards*/
   --subtitulos: #60a5fa;    /*Os subtitulos*/
+  --erro: #f87171;   /*Corzinha para caso der erro*/
+  --sucesso: #4ade80;   /*E uma pra caso der bom*/
 }
 
 body{
@@ -100,6 +102,56 @@ select, input{    /*O select é uma tag como o resto e nao uma classe como o .fi
   padding: 16px;
 }
 
-h2{
+h2, h3{
   color: var(--subtitulos);   /*Colocando cor nos subtitulos*/
+}
+
+ol li{    /*Tag para pegar cada item dentro da lista enumerada*/
+  margin-bottom: 16px;    /*Colocado um espaco entre uma questao e outra*/
+  line-height: 1.5;   /*Deixa as linhas mais afastadas umas das outras*/
+}
+
+.resposta{
+  display: block;
+  margin-top: 4px;
+  color: var(--textoS);
+}
+
+.selo{
+  color: var(--textoS);
+  font-size: 14px;    /*Deixando a letrinha pequena para parecer rodape*/
+  border-top: 1px solid var(--bordas);
+  padding-top: 12px;
+  margin-top: 24px;
+}
+
+.formulario{
+  display: flex;
+  flex-direction: column; /*Deixando um campo embaixo do outro*/
+  gap: 16px;
+  max-width: 480px;   /*Um espacozinho entre o nome e a caixinha*/
+}
+
+.formulario label{
+  display: flex;
+  flex-direction: column; /*Pra ficar com o nome em cima e a caixa embaixo*/
+  gap: 6px;
+}
+
+button{
+  background-color: var(--destaque);
+  color: var(--textoP);
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;  /*Colocar uma maozinha de cursor*/
+}
+
+.erros{
+  color: var(--erro);
+}
+
+.sucesso{
+  color: var(--sucesso);
 }

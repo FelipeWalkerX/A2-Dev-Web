@@ -41,14 +41,12 @@ export default async function PaginaRoteiro(props) {
                 </section>
             </div>
 
-            <h2>
-                <br /> Questões:
-            </h2>
+            <h2>Questões:</h2>
             <ol>    {/* <ol> cria uma lista ordenada */}
                 {roteiro.questoes.map((questao, posicao) =>(
-                    <li key = {posicao}>{questao.pergunta} <br /> 
-                    Resposta: {questao.resposta} <br />
-                    <br /> </li>
+                    <li key = {posicao}>{questao.pergunta} 
+                    <span className="resposta">Resposta: {questao.resposta} </span>
+                    </li>
                     
                 ))}
             </ol>
@@ -61,5 +59,3 @@ export default async function PaginaRoteiro(props) {
         </main> 
     )
 }
-
-//<br /> serve como se fosse um \n, ou seja, pra quebrar linha e nao precisar ficar dando 5 milhoes de <p></p>
